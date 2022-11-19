@@ -1,5 +1,6 @@
 package Utilities;
 
+import com.github.javafaker.Faker;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -13,6 +14,8 @@ public class TestBase {
 
     protected WebDriver driver;
     protected Actions actions;
+
+    protected Faker faker;
 
     @Before
     public void setUp() {
