@@ -37,8 +37,6 @@ public class Q13_VerifyProductQuantityInCart extends TestBase {
             count++;
         }
 
-        // WebElement afterIncreaseQuantityWE = driver.findElement(By.xpath("//input[@id='quantity']"));
-
         // 7. Click 'Add to cart' button
         driver.findElement(By.xpath("//button[@class='btn btn-default cart']")).click();
 
