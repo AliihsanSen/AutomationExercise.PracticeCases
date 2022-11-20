@@ -39,6 +39,5 @@ public class Q08VerifyAllProductsAndProductDetailPage extends TestBase {
         //  9. Verify that detail detail is visible: product name, category, price, availability, condition, brand
         Assert.assertTrue(driver.findElement(By.xpath("//div[@class='product-information']")).isDisplayed());
         System.out.println(driver.findElement(By.xpath("//div[@class='product-information']")).getText());
-
     }
 }
