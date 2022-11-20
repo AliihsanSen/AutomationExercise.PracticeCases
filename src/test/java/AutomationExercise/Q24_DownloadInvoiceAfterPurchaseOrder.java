@@ -112,16 +112,16 @@ public class Q24_DownloadInvoiceAfterPurchaseOrder extends TestBase {
 
         // 15. Enter description in comment text area and click 'Place Order'
         WebElement textArea = driver.findElement(By.xpath("//textarea[@class='form-control']"));
-        actions.sendKeys(Keys.PAGE_DOWN,Keys.ARROW_DOWN,Keys.ARROW_DOWN,Keys.ARROW_DOWN,Keys.ARROW_DOWN,Keys.ARROW_DOWN,Keys.ARROW_DOWN).perform();
+        actions.sendKeys(Keys.PAGE_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN).perform();
         Thread.sleep(2000);
         actions.click(textArea).sendKeys("Ihsan in test automation exercises site").perform();
         driver.findElement(By.xpath("//*[text()='Place Order']")).click();
 
         // 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
-        WebElement nameOnCardBox=driver.findElement(By.xpath("//input[@name='name_on_card']"));
-        actions.click(nameOnCardBox).sendKeys(faker.name().fullName()+Keys.TAB).sendKeys(faker.finance().iban()+Keys.TAB).
-                sendKeys(faker.number().digits(3)+Keys.TAB).
-                sendKeys(faker.number().digits(1)+Keys.TAB).sendKeys(faker.number().digits(4)).perform();
+        WebElement nameOnCardBox = driver.findElement(By.xpath("//input[@name='name_on_card']"));
+        actions.click(nameOnCardBox).sendKeys(faker.name().fullName() + Keys.TAB).sendKeys(faker.finance().iban() + Keys.TAB).
+                sendKeys(faker.number().digits(3) + Keys.TAB).
+                sendKeys(faker.number().digits(1) + Keys.TAB).sendKeys(faker.number().digits(4)).perform();
 
         // 17. Click 'Pay and Confirm Order' button
         driver.findElement(By.xpath("//button[@data-qa='pay-button']")).click();
@@ -133,8 +133,8 @@ public class Q24_DownloadInvoiceAfterPurchaseOrder extends TestBase {
         driver.findElement(By.xpath("//*[text()='Download Invoice']")).click();
         Thread.sleep(1500);
         String anaDizin = System.getProperty("user.home");
-        String dosyaYolu="\\Downloads\\invoice.txt";
-        String filePath=anaDizin+dosyaYolu;
+        String dosyaYolu = "\\Downloads\\invoice.txt";
+        String filePath = anaDizin + dosyaYolu;
         Assert.assertTrue(Files.exists(Paths.get(filePath)));
 
         // 20. Click 'Continue' button
@@ -147,3 +147,4 @@ public class Q24_DownloadInvoiceAfterPurchaseOrder extends TestBase {
         // "The delete site is broken"
 
     }
+}
