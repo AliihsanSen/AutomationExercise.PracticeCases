@@ -11,6 +11,7 @@ public class Q20_SearchProductsAndVerifyCartAfterLogin extends TestBase {
 
     @Test
     public void name() throws InterruptedException {
+
         // 1. Launch browser
         // 2. Navigate to url 'http://automationexercise.com'
         driver.get("http://automationexercise.com");
