@@ -21,7 +21,7 @@ public class Q14_PlaceOrderRegisterWhileCheckout extends TestBase {
 
         // 4. Click 'View Product' for any product on home page
         actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(1500);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("(//*[text()='View Product'])[5]")).click();
 
         // 5. Verify product detail is opened
