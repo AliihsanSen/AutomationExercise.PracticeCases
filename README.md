@@ -20,3 +20,6 @@ because there was a specific language request from us in the Case given by the c
 ⚡In order to conveniently check that the verification steps have taken place, the output has been taken on the console.
 
 ⚡With the created reusable methods, it was aimed to comply with the solid principles of the project.
+
+
+
